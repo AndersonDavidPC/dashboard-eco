@@ -302,52 +302,151 @@ export default function Home() {
                 layout="vertical"
                 align="right"
                 verticalAlign="middle"
-                wrapperStyle={{ paddingLeft: "20px" }}
+                wrapperStyle={{ paddingLeft: "20px", maxWidth: "400px" }}
               />
               <Bar
                 dataKey="J00_J06"
                 stackId="a"
                 fill="#8884d8"
-                name="Inf. agudas vías resp. sup."
-              />
-              <Bar
-                dataKey="J09_J18"
-                stackId="a"
-                fill="#82ca9d"
-                name="Influenza y neumonía"
+                name="J00-J06 INFECCIONES AGUDAS DE LAS VIAS RESPIRATORIAS SUPERIORES"
               />
               <Bar
                 dataKey="J20_J22"
                 stackId="a"
                 fill="#ffc658"
-                name="Otras inf. agudas vías resp. inf."
+                name="J20-J22 OTRAS INFECCIONES AGUDAS DE LAS VIAS RESPIRATORIAS INFERIORES"
               />
               <Bar
                 dataKey="J30_J39"
                 stackId="a"
                 fill="#ff7300"
-                name="Otras enf. vías resp. sup."
+                name="J30-J39 OTRAS INFECCIONES AGUDAS DE LAS VIAS RESPIRATORIAS SUPERIORES"
               />
               <Bar
                 dataKey="J40_J47"
                 stackId="a"
                 fill="#00c49f"
-                name="Enf. crónicas vías resp. inf."
-              />
-              <Bar
-                dataKey="J60_J70"
-                stackId="a"
-                fill="#ff6361"
-                name="Enf. pulmón agentes externos"
+                name="J40-J47 ENFERMEDADES CRONICAS DE LAS VIAS RESPIRATORIAS INFERIORES"
               />
               <Bar
                 dataKey="J80_J84"
                 stackId="a"
                 fill="#58508d"
-                name="Otras enf. respiratorias intersticiales"
+                name="J80-J84 OTRAS ENFERMEDADES RESPIRATORIAS QUE AFECTAN PRINCIPALMENTE AL INTERSTICIO"
               />
               <Bar
                 dataKey="J85_J86"
+                stackId="a"
+                fill="#bc5090"
+                name="J85-J86 AFECCIONES SUPURATIVAS Y NECROTICAS DE LAS VIAS RESPIRATORIAS INFERIORES"
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+
+      <Card className="md:col-span-2">
+        <CardContent>
+          <h2 className="text-xl font-semibold mb-4">
+            Distribución de Enfermedades Respiratorias por Grupo de Edad (2022)
+          </h2>
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart
+              data={[
+                {
+                  grupo: "De 0 a 05 años",
+                  "J00-J06": 6638,
+                  "J20-J22": 3430,
+                  "J30-J39": 1038,
+                  "J40-J47": 516,
+                  "J80-J84": 7,
+                  "J85-J86": 1,
+                },
+                {
+                  grupo: "De 06 a 11 años",
+                  "J00-J06": 3918,
+                  "J20-J22": 1648,
+                  "J30-J39": 1547,
+                  "J40-J47": 698,
+                  "J80-J84": 7,
+                  "J85-J86": 3,
+                },
+                {
+                  grupo: "De 12 a 17 años",
+                  "J00-J06": 1462,
+                  "J20-J22": 603,
+                  "J30-J39": 968,
+                  "J40-J47": 302,
+                  "J80-J84": 2,
+                  "J85-J86": 1,
+                },
+                {
+                  grupo: "De 18 a 28 años",
+                  "J00-J06": 2970,
+                  "J20-J22": 1724,
+                  "J30-J39": 1248,
+                  "J40-J47": 295,
+                  "J80-J84": 18,
+                  "J85-J86": 5,
+                },
+                {
+                  grupo: "De 29 a 59 años",
+                  "J00-J06": 6734,
+                  "J20-J22": 4761,
+                  "J30-J39": 3325,
+                  "J40-J47": 1385,
+                  "J80-J84": 207,
+                  "J85-J86": 24,
+                },
+                {
+                  grupo: "De 60 y más",
+                  "J00-J06": 2552,
+                  "J20-J22": 2577,
+                  "J30-J39": 1782,
+                  "J40-J47": 4121,
+                  "J80-J84": 568,
+                  "J85-J86": 32,
+                },
+              ]}
+              layout="vertical"
+              margin={{ left: 120 }}
+            >
+              <XAxis type="number" />
+              <YAxis type="category" dataKey="grupo" />
+              <Tooltip />
+              <Legend wrapperStyle={{ paddingLeft: "20px" }} />
+              <Bar
+                dataKey="J00-J06"
+                stackId="a"
+                fill="#8884d8"
+                name="Infecciones agudas vías resp. sup."
+              />
+              <Bar
+                dataKey="J20-J22"
+                stackId="a"
+                fill="#ffc658"
+                name="Otras inf. agudas vías resp. inf."
+              />
+              <Bar
+                dataKey="J30-J39"
+                stackId="a"
+                fill="#ff7300"
+                name="Otras inf. agudas vías resp. sup."
+              />
+              <Bar
+                dataKey="J40-J47"
+                stackId="a"
+                fill="#00c49f"
+                name="Enf. crónicas vías resp. inf."
+              />
+              <Bar
+                dataKey="J80-J84"
+                stackId="a"
+                fill="#58508d"
+                name="Enf. respiratorias intersticiales"
+              />
+              <Bar
+                dataKey="J85-J86"
                 stackId="a"
                 fill="#bc5090"
                 name="Afecciones supurativas"
