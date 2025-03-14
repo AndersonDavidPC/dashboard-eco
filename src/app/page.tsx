@@ -455,6 +455,32 @@ export default function Home() {
           </ResponsiveContainer>
         </CardContent>
       </Card>
+
+      <Card className="md:col-span-2">
+        <CardContent>
+          <h2 className="text-xl font-semibold mb-4">Fuentes de Datos</h2>
+          <div className="space-y-2">
+            <a
+              target="_blank"
+              href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Morbilidad-atendida-San-Jos-de-C-cuta/2dsx-ix3k/explore/query/SELECT%0A%20%20%60id%60%2C%0A%20%20%60municipio%60%2C%0A%20%20%60capitulo%60%2C%0A%20%20%60grupo_causa%60%2C%0A%20%20%60subgrupo_causa%60%2C%0A%20%20%60curso_vida%60%2C%0A%20%20%60sexo%60%2C%0A%20%20%60vigencia_2015%60%2C%0A%20%20%60vigencia_2016%60%2C%0A%20%20%60vigencia_2017%60%2C%0A%20%20%60vigencia_2018%60%2C%0A%20%20%60vigencia_2019%60%2C%0A%20%20%60vigencia_2020%60%2C%0A%20%20%60vigencia_2021%60%2C%0A%20%20%60vigencia_2022%60%2C%0A%20%20%60vigencia_2023%60/page/filter"
+            >
+              <p className="text-sm text-muted-foreground">
+                • Morbilidad atendida San José de Cúcuta: Alcaldía de Cúcuta
+                (2015-2023)
+              </p>
+            </a>
+            <a
+              href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Tasa-Ajustadas-de-Mortalidad-San-Jos-de-C-cuta/jwz2-hqp6/about_data"
+              target="_blank"
+            >
+              <p className="text-sm text-muted-foreground">
+                • Tasa Ajustadas de Mortalidad San José de Cúcuta: Alcaldía de
+                Cúcuta (2005-2022)
+              </p>
+            </a>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
